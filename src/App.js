@@ -29,6 +29,7 @@ class App extends Component {
       memberName: '',
       groups: [],
       postToGroup: '',
+      memberEmail:'',
     }
 
     //binding all the methods to this
@@ -193,6 +194,7 @@ class App extends Component {
     this.setState({
       memberToGroup: '',
       memberName: '',
+      memberEmail: '',
     });
   
   }
@@ -389,6 +391,7 @@ class App extends Component {
                     <form onSubmit={this.handleAddToGroup}>
                       <input type="text" name="memberToGroup" placeholder="What group do you want to add to?" onChange={this.handleChange} value={this.state.memberToGroup} /> 
                       <input type="text" name="memberName" placeholder="What's your new members name?" onChange={this.handleChange} value={this.state.memberName} />
+                      <input type="text" name="memberEmail" placeholder="What's your new members email?" onChange={this.handleChange} value={this.state.memberEmail} />
                       <button>Add To Group</button>
                     </form>
                   </section>
